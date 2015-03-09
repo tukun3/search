@@ -1,0 +1,38 @@
+<h1>あなたにオススメなお店！</h1>
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, 
+    	function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+       window.onload =function() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function(position) {
+                  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                  var options = {
+                      zoom: 15,
+                      center: latlng,
+                      mapTypeId: google.maps.MapTypeId.ROADMAP
+                  };
+                  var map = new google.maps.Map(document.getElementById('map'), options);
+                  var marker = new google.maps.Marker({
+                      position: latlng,
+                      map: map,
+                      title: '現在地'
+                  });
+              }, function(e) {
+                  document.getElementById('message').innerHTML = typeof e == 'string' ? e : e.message;
+              });
+          } else {
+              document.getElementById('message').innerHTML = 'Location APIがサポートされていません。';
+          }
+      };
+ 
+</script>
+<p>Find me in app/views/map/index.html.erb</p>
