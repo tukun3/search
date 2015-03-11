@@ -1,5 +1,5 @@
 <h1>あなたにオススメなお店！</h1>
-<div style='width: 800px;'>
+<div style='width: 800px; height: 410px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 <div id="message"></div>
@@ -16,7 +16,7 @@
               navigator.geolocation.getCurrentPosition(function(position) {
                   var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
                   var options = {
-                      zoom: 15,
+                      zoom: 16,
                       center: latlng,
                       mapTypeId: google.maps.MapTypeId.ROADMAP
                   };
@@ -46,11 +46,9 @@
                 var newmarker = new google.maps.Marker({
                       position: destination,
                       map: map,
-                      title: shop_name})
+                      title: shop_name});
 
-                }     
-              
-            
+              }
 
 
             });
@@ -63,7 +61,11 @@
           }
       };
 
-
-
 </script>
+
+<div id="info_wrapper">
+<h2>お店の詳細</h2>
+<p>ここからお店まで○m</p>
+</div>
+
 <p>Find me in app/views/map/index.html.erb</p>
