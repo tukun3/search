@@ -42,10 +42,11 @@
                 var shop = json.results.shop[Math.floor(Math.random() * json.results.shop.length)];
                 console.log(shop);
                 var destination = new google.maps.LatLng(shop.lat, shop.lng);
+                var shop_name = shop.name;
                 var newmarker = new google.maps.Marker({
                       position: destination,
                       map: map,
-                      title: 'おすすめの店'})
+                      title: shop_name})
 
                 }     
               
