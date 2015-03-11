@@ -12,28 +12,46 @@
 				<li>
 				<select name="distance" id="distance">
 				<option value="サンプル1">現在地からの距離</option>
-				<option value="サンプル2">いろいろ</option>
+				<option class="xy">いろいろ</option>
 				</select>
 				</li>
 
 				<li>
 				<select name="genre" id="genre">
 				<option value="サンプル1">お店のジャンル</option>
-				<option value="サンプル2">いろいろ</option>
+				<option class="genre">いろいろ</option>
 				</select>
 				</li>
 
 				<li>
 				<select name="budget" id="budget">
 				<option value="サンプル1">予算</option>
-				<option value="サンプル2">いろいろ</option>
+				<option class="budget">いろいろ</option>
 				</select>
 				</ul>
 				</li>
 
+          <a href="/map/index"><img src="../assets/button.gif"></a>
 
-			<input id="submit_button" type="submit" value="検索">
+			
+<script>
+     $.ajax({
+                type: 'GET',
+                url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/',
+                data: {
+                  key: '1ce1cb8c8c73f898',
+                  format:'jsonp'
+                },
+                dataType: 'jsonp',
+                jsonpCallback: 'android',
+            },
+            success: function(jsnp){
+            	console.log(jsnp);
+            }
+        });
 
+	
+</script>
 			</form>
 
 		</div>

@@ -1,71 +1,80 @@
 <h1>あなたにオススメなお店！</h1>
-<div style='width: 800px; height: 410px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
-<div id="message"></div>
-<script type="text/javascript">
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, 
-      function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
-       window.onload =function() {
-          if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(function(position) {
-                  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                  var options = {
-                      zoom: 16,
-                      center: latlng,
-                      mapTypeId: google.maps.MapTypeId.ROADMAP
-                  };
-                  var map = new google.maps.Map(document.getElementById('map'), options);
-                  var marker = new google.maps.Marker({
-                      position: latlng,
-                      map: map,
-                      title: '現在地'
-                  });
-            $.ajax({
-              type: 'GET',
-              url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/',
-              data: {
-                key: '1ce1cb8c8c73f898',
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-                format:'jsonp'
-              },
-              dataType: 'jsonp',
-              jsonpCallback: 'android',
-              success: function(json){
-                console.log(json);
-                var shop = json.results.shop[Math.floor(Math.random() * json.results.shop.length)];
-                console.log(shop);
-                var destination = new google.maps.LatLng(shop.lat, shop.lng);
-                var shop_name = shop.name;
-                var newmarker = new google.maps.Marker({
-                      position: destination,
-                      map: map,
-                      title: shop_name});
 
-              }
+<div id="result_wrapper">
+  <div class="clear_both" style='width: 800px; height: 400px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
+  <div id="message"></div>
+  <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'map'}}, 
+        function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+         window.onload =function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    var options = {
+                        zoom: 16,
+                        center: latlng,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById('map'), options);
+                    var marker = new google.maps.Marker({
+                        position: latlng,
+                        map: map,
+                        title: '現在地'
+                    });
+              $.ajax({
+                type: 'GET',
+                url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/',
+                data: {
+                  key: '1ce1cb8c8c73f898',
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                  format:'jsonp'
+                },
+                dataType: 'jsonp',
+                jsonpCallback: 'android',
+                success: function(json){
+                  console.log(json);
+                  var shop = json.results.shop[Math.floor(Math.random() * json.results.shop.length)];
+                  console.log(shop);
+                  var destination = new google.maps.LatLng(shop.lat, shop.lng);
+                  var shop_name = shop.name;
+                  var newmarker = new google.maps.Marker({
+                        position: destination,
+                        map: map,
+                        title: shop_name});
+                  
 
+                }
 
-            });
-
-              }, function(e) {
-                  document.getElementById('message').innerHTML = typeof e == 'string' ? e : e.message;
               });
-          } else {
-              document.getElementById('message').innerHTML = 'Location APIがサポートされていません。';
-          }
-      };
 
-</script>
+                }, function(e) {
+                    document.getElementById('message').innerHTML = typeof e == 'string' ? e : e.message;
+                });
+            } else {
+                document.getElementById('message').innerHTML = 'Location APIがサポートされていません。';
+            }
+        };
 
-<div id="info_wrapper">
-<h2>お店の詳細</h2>
-<p>ここからお店まで○m</p>
+  </script>
+
+  <div id="info_wrapper">
+  <p>ここから店まで○m!!</p>
+  <dt>店名</dt>
+  <dd>
+   <li>電話番号</li>
+   <li>ジャンル</li>
+   <li>価格帯</li>
+   <li>営業時間</li>
+ </dd>
+  </div>
 </div>
 
 <p>Find me in app/views/map/index.html.erb</p>

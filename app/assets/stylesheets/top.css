@@ -37,13 +37,23 @@
 	background: #facd89;
 }
 
-#search_wrapper p
-{   
+#search_wrapper p{  
+   
 	margin:1em 0;
+	padding: 2px 0;
 	text-align: center;
-    font-size:1.2em;
+    font-size:1.1em;
 	background: #f8b551;
 	color:white;
 }
 
+form{
+	margin-right:25%;
+	text-align:right;
+	
+}
 
+img{
+	width:65%;
+	
+}
