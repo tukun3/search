@@ -7,9 +7,12 @@
 
 
 
-
-#img{
+#mainwrapper{
 	text-align:center;
+	width:80%;
+	height:auto;
+}
+#img{
 	background: url(../assets/mainimg.jpg) no-repeat;
 	width:100%;
 	height:800px;
@@ -18,6 +21,7 @@
 
 #search_wrapper{
 	float:right;
+	
 	border-radius:10px;
 	background-color: #facd89;
 	border:solid 1px ; 
