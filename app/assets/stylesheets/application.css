@@ -8,8 +8,9 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
+ 
  *= require_tree .
+ *= require_self
  */
  html{
         color:#000;
@@ -145,7 +146,7 @@ header{
 	width: 100%;
 	height: 90%;
 	background-color: #fcf0dd;
-	box-shadow:0 1px 1px 1px #2d2603;
+	box-shadow-bottom:1px 1px 1px 1px #2d2603;
 }
 
 footer{
