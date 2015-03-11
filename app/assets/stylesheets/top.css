@@ -1,5 +1,35 @@
 
-img{
- width: 100%;
- height: auto;
+#top_main{
+	width:100%;
+	margin-top:2px;
+	background-color: #facd89;
+}
+
+
+
+
+#img{
+	text-align:center;
+	background: url(../assets/mainimg.jpg) no-repeat;
+	width:100%;
+	height:800px;
+	-webkit-background-size:80%;
+}
+
+#search_wrapper{
+	float:right;
+	border-radius:10px;
+	background-color: #facd89;
+	border:solid 1px ; 
+	width:250px;
+	height:250px;
+}
+
+#search_wrapper span{
+	background: #facd89;
+}
+
+#search_wrapper p
+{
+	color:white;
 }

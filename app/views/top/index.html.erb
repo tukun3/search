@@ -1,4 +1,45 @@
-<h1>トップページです</h1>
 
-<div id="top_main"><img alt="serve" src="/assets/mainimg.jpg" /></div>
+<div id="top_main">
+<div id="img"></div>
+
+
+
+	<div id="search_wrapper">
+	    <span><p id="search_title">あなたにぴったりなお店を探す</p></span>
+		<form method="post" action="example.cgi">
+     
+			<ul>
+			<li>
+			<select name="distance" id="distance">
+			<option value="サンプル1">現在地からの距離</option>
+			<option value="サンプル2">いろいろ</option>
+			</select>
+			</li>
+
+			<li>
+			<select name="genre" id="genre">
+			<option value="サンプル1">お店のジャンル</option>
+			<option value="サンプル2">いろいろ</option>
+			</select>
+			</li>
+
+			<li>
+			<select name="budget" id="budget">
+			<option value="サンプル1">予算</option>
+			<option value="サンプル2">いろいろ</option>
+			</select>
+			</ul>
+			</li>
+
+
+		<input id="submit_button" type="submit" value="検索">
+
+		</form>
+
+	</div>
+
+
+</div>
+
+
 <p>Find me in app/views/top/index.html.erb</p>
