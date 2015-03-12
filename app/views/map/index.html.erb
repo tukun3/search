@@ -54,10 +54,12 @@
 
                   var the_list = $("<dl>");
                     the_list.append("<dt>" + shop_name + "</dt>"
-                                  + "<dd><li>" + shop.genre.name+"/"+shop.food.name + "</li></dd>"
-                                  + "<dd><li>" + shop.budget.average + "</li></dd>"
-                                  + "<dd><li>" + shop.open + "</li></dd>"
-                                  + "<dd><li>" + shop.catch + "</li></dd>");
+                                  + "<dd><li>" + 'ジャンル：' + shop.genre.name+"/"+shop.food.name + "</li></dd>"
+                                  + "<dd><li>" + '予算：' + shop.budget.average + "</li></dd>"
+                                  + "<dd><li>" + '営業時間：' + shop.open + "</li></dd>"
+                                  + "<dd><li>" + shop.catch + "</li></dd>"
+                                  );
+                                  
                     the_list.appendTo("#info_wrapper");
               }
 

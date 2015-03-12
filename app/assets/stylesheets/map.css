@@ -1,4 +1,5 @@
 
+
 #result_wrapper{
 	width: 80%;
 	height: auto;
@@ -13,13 +14,16 @@
 	float: left;
 }
 #info_wrapper{
+	width: 390px;
 	float: left;
-	margin-left: 2em;
+	margin-left: 20px;
 }
 
 #info_wrapper li{
 	list-style: none;
+	
 }
+
 
 footer{
 	clear: both;
