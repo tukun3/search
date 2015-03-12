@@ -7,7 +7,10 @@
 	overflow: hidden;
 }
 
-
+#distance strong{
+	font-weight: bold;
+	font-size:1.1em;
+}
 
 #map{
 	width: 700px; height:500px;
@@ -39,7 +42,7 @@ dd span{
 	font-weight: bold;
 }
 
-form{
+#mapp {
 	display:inline-block;
 	margin-top:4em;
 	margin-left: 3em;
@@ -60,6 +63,9 @@ form h2{
 }
 .comment{
 	margin-top:0.7em;
+}
+input:hover{
+	background-color: #92cdec;
 }
 footer{
 	clear: both;
