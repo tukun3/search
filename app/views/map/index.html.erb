@@ -54,10 +54,10 @@
 
                   var the_list = $("<dl>");
                     the_list.append("<dt>" + shop_name + "</dt>"
-                                  + "<dd><li>" + 'ジャンル：' + shop.genre.name+"/"+shop.food.name + "</li></dd>"
-                                  + "<dd><li>" + '予算：' + shop.budget.average + "</li></dd>"
-                                  + "<dd><li>" + '営業時間：' + shop.open + "</li></dd>"
-                                  + "<dd><li>" + shop.catch + "</li></dd>"
+                                  + "<dd><li>" + 'ジャンル：' + "<span>"+ shop.genre.name+"/"+shop.food.name + "</span>" + "</li></dd>"
+                                  + "<dd><li>" + '予算：' + "<span>"+ shop.budget.average + "</span>" + "</li></dd>"
+                                  + "<dd><li>" + '営業時間：' + "<span>"+ shop.open + "</span>" + "</li></dd>"
+                                  + "<dd><li>" + '〜' + shop.catch +'〜' +   "</li></dd>"
                                   );
                                   
                     the_list.appendTo("#info_wrapper");
@@ -77,6 +77,18 @@
   </script>
 
   <div id="info_wrapper"></div>
+
+    
+    <form method="post" >
+     <h2>どんなお店でしたか？</h2>
+     <p><label><span>店名：</span>
+     <input type="text" name="name" size="30%"></label></p>
+     <p class="comment"><label><span>コメント：</span><br>
+     <textarea name="comments" rows="2" cols="35%"></textarea></label></p>
+      <p class="send_button"><input type="submit" value="送信"><input type="reset" value="リセット"></p>
+    
+    </form>
+ 
 
 </div>
 

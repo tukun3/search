@@ -6,7 +6,7 @@
 
 	<div id="search_wrapper">
 		    <span><p id="search_title" class="no-opacity">あなたにぴったりなお店を探す</p></span>
-			<form method="post" action="example.cgi" class="no_opacity">
+			<form method="post" action="/map/index" >
 	     
 				<ul>
 				<li>
@@ -34,24 +34,7 @@
           <a href="/map/index"><img src="../assets/button.gif"></a>
 
 			
-<script>
-     $.ajax({
-                type: 'GET',
-                url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/',
-                data: {
-                  key: '1ce1cb8c8c73f898',
-                  format:'jsonp'
-                },
-                dataType: 'jsonp',
-                jsonpCallback: 'android',
-            },
-            success: function(jsnp){
-            	console.log(jsnp);
-            }
-        });
 
-	
-</script>
 			</form>
 
 		</div>

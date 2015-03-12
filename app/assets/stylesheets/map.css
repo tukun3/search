@@ -16,7 +16,8 @@
 #info_wrapper{
 	width: 390px;
 	float: left;
-	margin-left: 20px;
+	margin-left: 3em;
+	
 }
 
 #info_wrapper li{
@@ -24,7 +25,42 @@
 	
 }
 
+h1,h2,dt{
+	font-size:1.2em;
+	font-weight:bold;
+}
 
+dt{
+	font-size:1.3em;
+	margin-bottom:0.6em;
+}
+
+dd span{
+	font-weight: bold;
+}
+
+form{
+	display:inline-block;
+	margin-top:4em;
+	margin-left: 3em;
+	background-color: #;
+	
+}
+
+form h2{
+	margin:1em;
+}
+.comment{
+	text-align: left;
+}
+
+.send_button{
+	text-align: right;
+	margin-top:1em;
+}
+.comment{
+	margin-top:0.7em;
+}
 footer{
 	clear: both;
 }
