@@ -1,9 +1,9 @@
-<h1>あなたにオススメなお店！</h1>
+
 
 <div id="result_wrapper">
-  <div class="clear_both" style='width: 800px; height: 400px;'>
-    <div id="map" style='width: 800px; height: 400px;'></div>
-  </div>
+　<h1>あなたにオススメなお店！</h1>
+  
+    <div id="map"></div>
   <div id="message"></div>
   <script type="text/javascript">
       handler = Gmaps.build('Google');
@@ -44,14 +44,23 @@
                   var shop = json.results.shop[Math.floor(Math.random() * json.results.shop.length)];
                   console.log(shop);
                   var destination = new google.maps.LatLng(shop.lat, shop.lng);
+
                   var shop_name = shop.name;
+
                   var newmarker = new google.maps.Marker({
                         position: destination,
                         map: map,
                         title: shop_name});
-                  
 
-                }
+                  var the_list = $("<dl>");
+                    the_list.append("<dt>" + shop_name + "</dt>"
+                                  + "<dd><li>" + shop.genre.name+"/"+shop.food.name + "</li></dd>"
+                                  + "<dd><li>" + shop.budget.average + "</li></dd>"
+                                  + "<dd><li>" + shop.open + "</li></dd>"
+                                  + "<dd><li>" + shop.catch + "</li></dd>");
+                    the_list.appendTo("#info_wrapper");
+              }
+
 
               });
 
@@ -65,16 +74,7 @@
 
   </script>
 
-  <div id="info_wrapper">
-  <p>ここから店まで○m!!</p>
-  <dt>店名</dt>
-  <dd>
-   <li>電話番号</li>
-   <li>ジャンル</li>
-   <li>価格帯</li>
-   <li>営業時間</li>
- </dd>
-  </div>
+  <div id="info_wrapper"></div>
+
 </div>
 
-<p>Find me in app/views/map/index.html.erb</p>

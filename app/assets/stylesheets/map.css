@@ -1,0 +1,26 @@
+
+#result_wrapper{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+
+#map{
+	width: 700px; height:500px;
+	float: left;
+}
+#info_wrapper{
+	float: left;
+	margin-left: 2em;
+}
+
+#info_wrapper li{
+	list-style: none;
+}
+
+footer{
+	clear: both;
+}
