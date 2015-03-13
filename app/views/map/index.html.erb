@@ -69,6 +69,7 @@
                    dist.appendTo("#distance");
               }
               });
+
                 }, function(e) {
                     document.getElementById('message').innerHTML = typeof e == 'string' ? e : e.message;
                 });
@@ -80,8 +81,9 @@
 
   <div id="info_wrapper"></div>
 
-    
-    <form id="mapp" method="post" >
+
+
+  <form id="mapp" method="post" >
      <h2>どんなお店でしたか？</h2>
      <p><label><span>店名：</span>
      <input type="text" name="name" size="30%"></label></p>
@@ -91,6 +93,27 @@
     
     </form>
  
+  <!-- /<div id="mapp"> 
+       <h2>どんなお店でしたか？</h2>
+      
+        <%= form ,method: :post do |f| %>
+         <p>
+            <%= f.label :title, "店名：" %><br>
+            <%= f.text_field :title %>
+          </p>
+           <p class="comment">
+            <%= f.label :text, "コメント：" %><br>
+            <%= f.text_area :body, cols: 35, rows: 2 %>
+          </p>
+           <p class="send_button">
+            <%= f.submit %>
+          </p>
+        <% end %>   
+
+   </div> /*-->
+
+      
+   
 
 </div>
 

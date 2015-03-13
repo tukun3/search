@@ -4,6 +4,7 @@ Search::Application.routes.draw do
   get "map/index"
   resources :users
   root to: "top#index"
+  resources :posts
   
 
 
