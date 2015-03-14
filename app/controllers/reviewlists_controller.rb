@@ -7,7 +7,7 @@ class ReviewlistsController < ApplicationController
   	@reviewlist.shopname = params[:reviewlist][:shopname]
   	@reviewlist.comment = params[:reviewlist][:comment]
   	@reviewlist.save
-  	#redirect_to '/reviewlists/index'
+  	redirect_to '/reviewlists/index'
   end
 end
 

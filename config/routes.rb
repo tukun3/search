@@ -6,7 +6,8 @@ Search::Application.routes.draw do
   root to: "top#index"
   resources :posts
   post "reviewlists" => "reviewlists#create"
-
+  get "reviewlists/index"
+  
   
 
 
