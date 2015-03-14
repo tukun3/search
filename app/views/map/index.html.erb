@@ -83,16 +83,24 @@
 
 
 
-  <form id="mapp" method="post" >
-     <h2>どんなお店でしたか？</h2>
-     <p><label><span>店名：</span>
-     <input type="text" name="name" size="30%"></label></p>
-     <p class="comment"><label><span>コメント：</span><br>
-     <textarea name="comments" rows="2" cols="35%"></textarea></label></p>
-      <p class="send_button"><input type="submit" value="送信"><input type="reset" value="リセット"></p>
     
-    </form>
- 
+    
+ <%= form_for (@reviewlist) do |f| %>
+
+  <div class="field">
+    <%= f.label :title, "店名：" %>
+    <%= f.text_field :shopname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content, "コメント：" %>
+    <%= f.text_field :comment %>
+  </div>
+  
+  <div class="input">
+    <%= f.submit "保存する" %>
+  </div>
+<% end %>
 
     
 </div>

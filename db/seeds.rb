@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+@reviewlist = Reviewlist.new
+@reviewlist.username = 'T Nozomu'
+@reviewlist.shopname = '鳥貴族　今出川'
+@reviewlist.comment = 'プレモルで298円はいい'
+@reviewlist.save
