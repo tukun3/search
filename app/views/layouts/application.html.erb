@@ -12,8 +12,10 @@
 <header>
 <div id="top_bar"></div>
 <div id="h_main">
+    <img src="../assets/images/onedish.gif" alt="OneDish">
+
 	<nav>
-		<% if user_signed_in? %> 
+		<% if user_signed_in? %> s
 				 <strong><%= current_user.email %></strong>.
 			  <%= link_to 'プロフィール変更', edit_user_registration_path %> |
 		      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
