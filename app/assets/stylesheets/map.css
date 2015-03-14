@@ -5,6 +5,7 @@
 	height: auto;
 	margin: 0 auto;
 	overflow: hidden;
+	clear: both;
 }
 
 #distance strong{
@@ -16,12 +17,19 @@
 	width: 700px; height:500px;
 	float: left;
 }
-#info_wrapper{
-	width: 390px;
+#info_form{
 	float: left;
-	margin-left: 3em;
+	box-sizing:border-box;
 	
 }
+
+#info_wrapper{
+	width: 300px;
+	margin:2em auto;
+	padding:1em 1.5em;
+	
+	}
+
 
 #info_wrapper li{
 	list-style: none;
@@ -33,6 +41,12 @@ h1,h2,dt{
 	font-weight:bold;
 }
 
+#info_wrapper{background-color: #fcf0dd;
+	 -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+	}
+
 dt{
 	font-size:1.3em;
 	margin-bottom:0.6em;
@@ -42,30 +56,36 @@ dd span{
 	font-weight: bold;
 }
 
-#mapp {
+.new_reviewlist {
 	display:inline-block;
-	margin-top:4em;
-	margin-left: 3em;
+	margin-top:3em;
+	margin-left: 2em;
 	background-color: #;
 	
 }
 
-form h2{
-	margin:1em;
-}
 .comment{
 	text-align: left;
+	box-sizing:border-box;
 }
 
-.send_button{
+.comment form{
+	box-sizing:border-box;
+}
+#submit{
 	text-align: right;
 	margin-top:1em;
 }
-.comment{
-	margin-top:0.7em;
+#submit input:hover{
+	color:#92cdec;
 }
-input:hover{
-	background-color: #92cdec;
+
+#reviewlist_shopname,#reviewlist_comment{
+	margin:0.5em;
+	width: 220px;
+}
+label{
+	margin-left:0.5em
 }
 footer{
 	clear: both;

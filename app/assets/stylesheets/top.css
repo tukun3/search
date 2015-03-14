@@ -44,10 +44,13 @@
     font-size:1.1em;
 	background: #f8b551;
 	color:white;
+	border-bottom:1px solid rgba(155,110,48,0.8);
+	
 }
 
+
 #search_wrapper ul{
-	width:80%;
+	width:86%;
 }
 
 #search_wrapper li{

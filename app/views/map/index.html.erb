@@ -1,4 +1,6 @@
 
+<%= stylesheet_link_tag "map", :media => "all" %>
+
 
 <div id="result_wrapper">
 
@@ -79,32 +81,31 @@
         };
   </script>
 
+<div id="info_form">
+ 
   <div id="info_wrapper"></div>
 
 
 
     
     
- <%= form_for Reviewlist.new do |f| %>
+ 
 
 <div class="comment">
-  <div class="input">
-    <%= f.label :shopname, "店名：" %>
-    <%= f.text_field :shopname %>
-  </div>
+<%= form_for Reviewlist.new do |f| %>
+    <%= f.label :shopname, "店名：" %><br>
+    <%= f.text_field :shopname %><br>
 
-  <div class="input">
-    <%= f.label :comment, "コメント：" %>
-    <%= f.text_field :comment %>
-  </div>
   
-  <div class="send_botton">
+    <%= f.label :comment, "コメント：" %><br>
+    <%= f.text_area :comment %>
+  
+  
+   <div id="submit">
     <%= f.submit "保存する" %>
-  </div>
-
-  </div>
+   </div>
 <% end %>
+</div>
 
-    
 </div>
 
