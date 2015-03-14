@@ -5,7 +5,8 @@ Search::Application.routes.draw do
   resources :users
   root to: "top#index"
   resources :posts
-  post "map" => "map#create"
+  post "reviewlists" => "reviewlists#create"
+
   
 
 

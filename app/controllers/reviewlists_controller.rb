@@ -1,7 +1,14 @@
-class ReviewlistController < ApplicationController
+class ReviewlistsController < ApplicationController
   def index
-    @reviewlist = Reviewlist.find_by(:username => params[:username])
-end
+  	
+  end
+  def create
+  	@reviewlist = Reviewlist.new
+  	@reviewlist.shopname = params[:reviewlist][:shopname]
+  	@reviewlist.comment = params[:reviewlist][:comment]
+  	@reviewlist.save
+  	#redirect_to '/reviewlists/index'
+  end
 end
 
  

@@ -85,20 +85,23 @@
 
     
     
- <%= form_for (@reviewlist) do |f| %>
+ <%= form_for Reviewlist.new do |f| %>
 
-  <div class="field">
-    <%= f.label :title, "店名：" %>
+<div class="comment">
+  <div class="input">
+    <%= f.label :shopname, "店名：" %>
     <%= f.text_field :shopname %>
   </div>
 
-  <div class="field">
-    <%= f.label :content, "コメント：" %>
+  <div class="input">
+    <%= f.label :comment, "コメント：" %>
     <%= f.text_field :comment %>
   </div>
   
-  <div class="input">
+  <div class="send_botton">
     <%= f.submit "保存する" %>
+  </div>
+
   </div>
 <% end %>
 
