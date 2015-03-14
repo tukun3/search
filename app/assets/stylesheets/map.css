@@ -39,6 +39,7 @@
 h1,h2,dt{
 	font-size:1.2em;
 	font-weight:bold;
+	text-shadow:  1px 1px 1px #fbf0dd;
 }
 
 #info_wrapper{background-color: #fcf0dd;
