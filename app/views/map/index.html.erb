@@ -52,15 +52,15 @@
                   var newmarker = new google.maps.Marker({
                         position: destination,
                         map: map,
-                        icon:'../assets/shopmarker.jpg',
-                        title: shop_name});
+                        title: shop_name
+                      });
 
                   var the_list = $("<dl>");
                     the_list.append("<dt>" + shop_name + "</dt>"
                                   + "<dd><li>" + 'ジャンル：' + "<span>"+ shop.genre.name+"/"+shop.food.name + "</span>" + "</li></dd>"
                                   + "<dd><li>" + '予算：' + "<span>"+ shop.budget.average + "</span>" + "</li></dd>"
                                   + "<dd><li>" + '営業時間：' + "<span>"+ shop.open + "</span>" + "</li></dd>"
-                                  + "<dd><li>" + '〜' + shop.catch +'〜' +   "</li></dd>"
+                                  + "<dd><li>" + '〜' + shop.catch +'〜' + "</li></dd>"
                                   );
                                   
                     the_list.appendTo("#info_wrapper");

@@ -14,18 +14,20 @@
 }
 
 #map{
-	width: 700px; height:500px;
+	width: 650px; height:500px;
 	float: left;
 }
 #info_form{
+	margin-left:2em ;
 	float: left;
 	box-sizing:border-box;
+	
 	
 }
 
 #info_wrapper{
 	width: 300px;
-	margin:2em auto;
+	
 	padding:1em 1.5em;
 	
 	}
@@ -52,6 +54,10 @@ dt{
 	font-size:1.3em;
 	margin-bottom:0.6em;
 }
+dd li{
+	border-bottom:1px dotted gray;
+	margin-bottom:0.5em;
+}
 
 dd span{
 	font-weight: bold;
@@ -60,13 +66,13 @@ dd span{
 .new_reviewlist {
 	display:inline-block;
 	margin-top:3em;
-	margin-left: 2em;
 	background-color: #;
 	
 }
 
 .comment{
 	text-align: left;
+	margin-left: 2em;
 	box-sizing:border-box;
 }
 
@@ -76,6 +82,7 @@ dd span{
 #submit{
 	text-align: right;
 	margin-top:1em;
+	margin-bottom:2em;
 }
 #submit input:hover{
 	color:#92cdec;
@@ -83,7 +90,7 @@ dd span{
 
 #reviewlist_shopname,#reviewlist_comment{
 	margin:0.5em;
-	width: 220px;
+	width: 250px;
 }
 label{
 	margin-left:0.5em
