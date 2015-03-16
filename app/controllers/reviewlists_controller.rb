@@ -1,6 +1,6 @@
 class ReviewlistsController < ApplicationController
   def index
-  	
+  
   end
   def create
   	@reviewlist = Reviewlist.new
